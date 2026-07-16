@@ -24,8 +24,8 @@ This project updates Nagad user roles in bulk from an Excel workbook. It logs in
 ```text
 .
 |-- main.py                         # Main entry point and per-user worker
-|-- config.yaml                     # Environment, credentials, processing, and alert settings
-|-- input.xlsx                      # Input user list
+|-- config.example.yaml             # Safe config template
+|-- input.xlsx                      # Local input user list, ignored by Git
 |-- core/
 |   |-- config_loader.py            # YAML config loader
 |   |-- logger.py                   # File and console logger setup
@@ -38,7 +38,7 @@ This project updates Nagad user roles in bulk from an Excel workbook. It logs in
 |-- alerts/
 |   |-- telegram.py                 # Telegram summary notification
 |   `-- email_alert.py              # Email report notification
-`-- logs/                           # Timestamped run logs
+`-- logs/                           # Timestamped run logs, ignored by Git
 ```
 
 ## Input File Format

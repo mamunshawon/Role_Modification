@@ -1,5 +1,7 @@
 # Local configuration and secrets
 config.yaml
+.env
+.envrc
 
 # Input and generated output
 input.xlsx
@@ -11,6 +13,54 @@ Role_Modification_report_*.xlsx
 # Python artifacts
 __pycache__/
 *.py[cod]
+*$py.class
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Test, coverage, and cache output
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+cover/
 
 # IDE/project-local files
 .idea/
+.vscode/
+*.iml
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+tempCodeRunnerFile.py
