@@ -1,5 +1,10 @@
-import pandas as pd
+import os
 from datetime import datetime
+
+import pandas as pd
+
+
+OUTPUT_DIR = "output"
 
 
 def generate_reports(results, logger=None):
@@ -15,10 +20,11 @@ def generate_reports(results, logger=None):
 
     df = pd.DataFrame(results, columns=columns)
 
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    excel_file = f"report_{timestamp}.xlsx"
-    html_file = f"report_{timestamp}.html"
+    excel_file = os.path.join(OUTPUT_DIR, f"report_{timestamp}.xlsx")
+    html_file = os.path.join(OUTPUT_DIR, f"report_{timestamp}.html")
 
     df.to_excel(excel_file, index=False)
     df.to_html(html_file, index=False)

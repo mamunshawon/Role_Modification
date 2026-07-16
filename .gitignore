@@ -6,6 +6,7 @@ config.yaml
 # Input and generated output
 input.xlsx
 logs/
+output/
 report_*.html
 report_*.xlsx
 Role_Modification_report_*.xlsx

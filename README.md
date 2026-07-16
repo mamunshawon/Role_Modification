@@ -38,7 +38,8 @@ This project updates Nagad user roles in bulk from an Excel workbook. It logs in
 |-- alerts/
 |   |-- telegram.py                 # Telegram summary notification
 |   `-- email_alert.py              # Email report notification
-`-- logs/                           # Timestamped run logs, ignored by Git
+|-- logs/                           # Timestamped run logs, ignored by Git
+`-- output/                         # Generated reports, ignored by Git
 ```
 
 ## Input File Format
@@ -117,8 +118,8 @@ The script will print a short summary at the end.
 Each run creates:
 
 - `logs/run_YYYYMMDD_HHMMSS.log`
-- `report_YYYYMMDD_HHMMSS.xlsx`
-- `report_YYYYMMDD_HHMMSS.html`
+- `output/report_YYYYMMDD_HHMMSS.xlsx`
+- `output/report_YYYYMMDD_HHMMSS.html`
 
 The report columns are:
 
@@ -148,7 +149,7 @@ Logs are written to `logs/` and also displayed in the console. A normal run reco
 - User-not-found cases.
 - Previous and new role IDs for each update.
 - Update success or failed API response.
-- Report file names.
+- Report file names inside `output/`.
 - Telegram/email alert status.
 - Final run summary.
 
