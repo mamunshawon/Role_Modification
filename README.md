@@ -25,6 +25,7 @@ This project updates Nagad user roles in bulk from an Excel workbook. It logs in
 .
 |-- main.py                         # Main entry point and per-user worker
 |-- config.example.yaml             # Safe config template
+|-- run.sh                          # Linux runner that prepares role_env and runs main.py
 |-- input.xlsx                      # Local input user list, ignored by Git
 |-- core/
 |   |-- config_loader.py            # YAML config loader
@@ -108,8 +109,10 @@ The script also needs Google Chrome and a compatible ChromeDriver available to S
 Place the Excel workbook at `input.xlsx`, then run:
 
 ```bash
-python main.py
+bash run.sh
 ```
+
+`run.sh` uses `/home/opsnav/shawon_Projects/python312/bin/python3.12`, creates or reuses `role_env`, installs missing dependencies from `requirements.txt`, runs `main.py`, and deactivates the environment when finished.
 
 The script will print a short summary at the end.
 
