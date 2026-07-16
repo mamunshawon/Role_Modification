@@ -1,0 +1,16 @@
+# Local configuration and secrets
+config.yaml
+
+# Input and generated output
+input.xlsx
+logs/
+report_*.html
+report_*.xlsx
+Role_Modification_report_*.xlsx
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# IDE/project-local files
+.idea/

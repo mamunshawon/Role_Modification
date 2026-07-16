@@ -1,0 +1,25 @@
+environment:
+  login_url: "https://auth.example.com/login"
+  get_user_url: "https://api.example.com/api/auth_user"
+  update_user_url: "https://api.example.com/api/auth-user-update-status"
+
+credentials:
+  username: "YOUR_USERNAME"
+  password: "YOUR_PASSWORD"
+
+processing:
+  chunk_size: 1000
+  max_workers: 10
+  retry_attempts: 3
+  request_timeout: 30
+  session_refresh_interval: 120
+
+alerts:
+  telegram_bot_token: "YOUR_TELEGRAM_BOT_TOKEN"
+  telegram_chat_id: "YOUR_CHAT_ID"
+  email_enabled: false
+  smtp_server: "smtp.office365.com"
+  smtp_port: 587
+  email_user: ""
+  email_pass: ""
+  email_to: ""
